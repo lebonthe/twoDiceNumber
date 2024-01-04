@@ -57,7 +57,7 @@ class ViewController: UIViewController {
         // 將骰子的數字用 data1 作為 forKey 存到 UserDefaults 中
         UserDefaults.standard.set(image1, forKey: "data1")
         // 將骰子的數字用 data2 作為 forKey 存到 UserDefaults 中
-        UserDefaults.standard.setValue(image2, forKey: "data2")
+        UserDefaults.standard.set(image2, forKey: "data2")
         print(UserDefaults.standard.string(forKey:"data1") ?? "無")
     }
 }
