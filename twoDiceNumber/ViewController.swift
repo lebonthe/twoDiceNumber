@@ -14,8 +14,8 @@ class ViewController: UIViewController {
     // 第二個骰子的 Image View
     @IBOutlet weak var dice2ImageView: UIImageView!
     
-    // 第一個骰子 1 到 6 點的 SF Symbol 名稱
-    let dice1Images = [
+    // 骰子 1 到 6 點的 SF Symbol 名稱
+    let diceImages = [
         "die.face.1",
         "die.face.2",
         "die.face.3",
@@ -23,18 +23,6 @@ class ViewController: UIViewController {
         "die.face.5",
         "die.face.6"
     ]
-    
-    // 第二個骰子 1 到 6 點的 SF Symbol 名稱
-    let dice2Images = [
-       "die.face.1.fill",
-       "die.face.2.fill",
-       "die.face.3.fill",
-       "die.face.4.fill",
-       "die.face.5.fill",
-       "die.face.6.fill",
-    ]
-    
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,10 +36,10 @@ class ViewController: UIViewController {
     // 擲骰子
     @IBAction func dice(_ sender: UIButton) {
         // 隨機取得 0...5 數字，更換 dice1ImageView 圖片
-        let image1 = dice1Images[Int.random(in: 0...5)]
+        let image1 = diceImages[Int.random(in: 0...5)]
         dice1ImageView.image = UIImage(systemName: image1)
         // 隨機取得 0...5 數字，，更換 dice2ImageView 圖片
-        let image2 = dice1Images[Int.random(in: 0...5)]
+        let image2 = diceImages[Int.random(in: 0...5)]
         dice2ImageView.image = UIImage(systemName: image2)
         
         // 將骰子的數字用 data1 作為 forKey 存到 UserDefaults 中
